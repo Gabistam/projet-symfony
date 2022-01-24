@@ -27,6 +27,11 @@ class Licence
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $media;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Licence
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getMedia(): ?string
+    {
+        return $this->media;
+    }
+
+    public function setMedia(string $media): self
+    {
+        $this->media = $media;
 
         return $this;
     }
