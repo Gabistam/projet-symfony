@@ -1,0 +1,49 @@
+
+body
+{
+    background-color: #6a9cfd;
+    
+}
+main
+{
+    padding-bottom: 200px;
+    justify-content: center;
+    text-align: center;
+}
+
+.card
+{
+    border-radius: 16px;
+    border: solid 8px white;
+}
+
+.card-body
+{
+    text-align: center;
+}
+
+.card-body button
+{
+    width: 70%;
+    border-radius: 30px;
+}
+
+.page-title
+{
+    margin: 100px;
+}
+
+footer
+{
+    margin-top: 150px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+
+}
+

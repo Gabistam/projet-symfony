@@ -1,0 +1,37 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+
+	<div class="page-title">
+		<h2>Ajouter un produit</h2>
+	</div>
+
+	<div class="container d-flex justify-content-center">
+		<div class="card" style="width: 50%;">
+			<img src="https://picsum.photos/450/250" class="card-img-top" alt="...">
+			<div class="card-body">
+				{{form_start(productForm)}}
+
+				{{form_label(productForm.name, 'Name')}}
+				{{form_widget(productForm.name)}}
+				<hr>
+				{{form_label(productForm.name, 'Price')}}
+				{{form_widget(productForm.price)}}
+				<hr>
+				{{form_label(productForm.name, 'Stock')}}
+				{{form_widget(productForm.stock)}}
+				<hr>
+				{{form_label(productForm.name, 'Category')}}
+				{{form_widget(productForm.category)}}
+
+				{{form_label(productForm.name, 'Licence')}}
+				{{form_widget(productForm.licence)}}
+				<hr>
+				{{form_widget(productForm.enregistrer)}}
+
+				{{form_end(productForm)}}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

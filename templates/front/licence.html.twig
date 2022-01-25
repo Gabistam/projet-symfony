@@ -1,0 +1,25 @@
+{% extends "front/base.html.twig" %}
+
+{% block main %}
+
+	<div class="page-title">
+		<h2>{{ licence.name }}</h2>
+	</div>
+
+	<div class="container">
+		<div class="card" style="width: 50%;">
+			<img src="{{ asset('images/' ~ licence.media) }}" alt="{{ licence.name }}">
+			<div class="card-body">
+				{% for product in licence.products %}
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item">Name :
+							{{ product.name }}</li>
+						<li class="list-group-item">image :
+							<img src="{{ asset('images/' ~ product.images[0].src ) }}" alt="{{ product.images[0].alt }}"></li>
+					</ul>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

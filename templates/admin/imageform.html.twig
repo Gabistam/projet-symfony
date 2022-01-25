@@ -1,0 +1,32 @@
+{% extends "admin/base.html.twig" %}
+
+{% block main %}
+	<div class="page-title">
+		<h2>Ajouter une image</h2>
+	</div>
+	<div class="container d-flex justify-content-center">
+		<div class="card" style="width: 50%;">
+			<img src="https://picsum.photos/450/250" class="card-img-top" alt="...">
+			<div class="card-body">
+				{{ form_start(imageForm) }}
+
+				{{ form_label(imageForm.alt, 'Alt de l\'image') }}
+				{{ form_widget(imageForm.alt) }}
+				<hr>
+				{{ form_label(imageForm.title, 'Titre de l\'image') }}
+				{{ form_widget(imageForm.title) }}
+				<hr>
+				{{ form_label(imageForm.product, 'Produit de l\'image') }}
+				{{ form_widget(imageForm.product) }}
+				<hr>
+				{{ form_label(imageForm.src, 'Fichier de l\'image') }}
+				{{ form_widget(imageForm.src) }}
+				<hr><br>
+				{{ form_widget(imageForm.Enregistrer)}}
+
+				{{ form_end(imageForm) }}
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

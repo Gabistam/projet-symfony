@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+
+	<h1>Bienvenue sur Super Amazon</h1>
+	<br><br>
+	<h3>Vous trouverez tous sur vos super-héros et leurs produits dérivés</h3>
+	<div class="d-flex justify-content-around">
+
+		{% for product in products %}
+			<div class="column">
+				<img src="{{ asset('image/' ~ image.src) }}" alt="{{ image.alt }}">
+			</div>
+		{% endfor %}
+
+
+	</div>
+	<br><br><br>
+	<a href="#">
+		<button>En savoir plus</button>
+	</a>
+{% endblock %}
